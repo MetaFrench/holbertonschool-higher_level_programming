@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 for i in range(10):
-    for z in range(10):
-        if i == 9 and z == 9:
+    for j in range(10):
+        if i == 9 and j == 9:
             print("99")
-        if i <= z:
-            print("{:d}{:d}".format(i, z), end=", ")
+        if i <= j:
+            print("{:d}{:d}".format(i, j), end=", ")
