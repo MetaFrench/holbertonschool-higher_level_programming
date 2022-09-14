@@ -23,4 +23,13 @@ class Rectangle():
     def perimeter(self):
         if 0 in (self.__width, self.__height):
             return 0
-        return 2*self.__width + 2*self.
+        return 2*self.__width + 2*self.__height
+
+    def __str__(self):
+        string = ""
+        if 0 in (self.__width, self.__height):
+            return ""
+        for i in range(self.__height - 1):
+            string += "#" * self.__width + "\n"
+        string += "#" * self.__width
+        return string
