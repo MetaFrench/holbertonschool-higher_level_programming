@@ -15,4 +15,21 @@ class Rectangle():
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__width = width
-        self.__height =
+        self.__height = height
+
+    def area(self):
+        return self.__width * self.__height
+
+    def perimeter(self):
+        if 0 in (self.__width, self.__height):
+            return 0
+        return 2*self.__width + 2*self.__height
+
+    def __str__(self):
+        string = ""
+        if 0 in (self.__width, self.__height):
+            return ""
+        for i in range(self.__height - 1):
+            string += "#" * self.__width + "\n"
+        string += "#" * self.__width
+        return string
