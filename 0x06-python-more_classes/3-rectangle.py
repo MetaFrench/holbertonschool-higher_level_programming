@@ -33,3 +33,20 @@ class Rectangle():
             string += "#" * self.__width + "\n"
         string += "#" * self.__width
         return string
+
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    @property
+    def width(self):
+        """Getter for width"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Setter for width"""
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
