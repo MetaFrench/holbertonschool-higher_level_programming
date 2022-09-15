@@ -1,0 +1,3 @@
+#!/usr/bin/python3
+def copy_list(hello_world):
+    return hello_world[:]
