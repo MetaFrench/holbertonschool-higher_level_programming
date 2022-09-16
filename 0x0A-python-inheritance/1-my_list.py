@@ -11,4 +11,4 @@ class MyList(list):
     def print_sorted(self):
         """Prints list in ascending order"""
 
-        print("{}".format((sorted)
+        print("{}".format((sorted(my_list))))
