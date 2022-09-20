@@ -11,10 +11,10 @@ fname = "add_item.json"
 Listfile = []
 
 try:
-    Listyfile = load_from_json_file(fname)
+    Listfile = load_from_json_file(fname)
 except:
     pass
 
 for i in range(1, len(sys.argv)):
-    ListyBoii.append(sys.argv[i])
+    Listfile.append(sys.argv[i])
 save_to_json_file(Listfile, fname)
