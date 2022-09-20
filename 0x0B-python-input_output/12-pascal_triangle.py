@@ -19,3 +19,9 @@ def pascal_triangle(n):
             row.append(0)
         pascal.append(row)
 
+    prev = pascal[0]
+    for i in range(1, n):
+        for j in range(1, i):
+            pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j]
+        pascal[i].append(1)
+    return
