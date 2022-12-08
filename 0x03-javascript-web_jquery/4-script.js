@@ -1,5 +1,11 @@
 #!/usr/bin/node
-const header = $('header');
-$('DIV#toggle_header').on('click', function (event) {
-  header.toggleClass('red green');
+const $ = window.$;
+$('DIV#toggle_header').click(function () {
+  if ($(this).hasClass('red')) {
+    $(this).removeClass('red');
+    $(this).addClass('green');
+  } else {
+    $(this).removeClass('green');
+    $(this).addClass('red');
+  }
 });
