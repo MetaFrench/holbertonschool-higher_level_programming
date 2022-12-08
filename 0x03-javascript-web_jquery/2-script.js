@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const header = $('header');
-$('DIV#red_header').on('click', function (event) {
-  header.css('color', 'red');
+const $ = window.$;
+$('DIV#red_header').click(function () {
+  $(this).css('color', '#F00');
 });
